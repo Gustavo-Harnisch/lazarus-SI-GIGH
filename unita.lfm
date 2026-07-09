@@ -1,0 +1,416 @@
+object FormConversor: TFormConversor
+  Left = 250
+  Height = 520
+  Top = 150
+  Width = 720
+  Caption = 'Conversor de unidades SI'
+  ClientHeight = 520
+  ClientWidth = 720
+  OnCreate = FormCreate
+  LCLVersion = '3.0.0.3'
+  object PageControlNav: TPageControl
+    Left = 16
+    Height = 480
+    Top = 16
+    Width = 688
+    ActivePage = TabMasa
+    TabIndex = 0
+    TabOrder = 0
+    object TabMasa: TTabSheet
+      Caption = 'Masa'
+      ClientHeight = 450
+      ClientWidth = 678
+      object LabelMasaTitulo: TLabel
+        Left = 24
+        Height = 16
+        Top = 24
+        Width = 114
+        Caption = 'Conversor de masa'
+      end
+      object EditMasa: TEdit
+        Left = 24
+        Height = 28
+        Top = 72
+        Width = 180
+        TabOrder = 0
+        Text = '1'
+      end
+      object ComboMasaOrigen: TComboBox
+        Left = 224
+        Height = 26
+        Top = 72
+        Width = 180
+        ItemHeight = 0
+        Items.Strings = (
+          'kilogramo (kg)'
+          'gramo (g)'
+          'miligramo (mg)'
+          'tonelada (t)'
+        )
+        Style = csDropDownList
+        TabOrder = 1
+      end
+      object ComboMasaDestino: TComboBox
+        Left = 424
+        Height = 26
+        Top = 72
+        Width = 180
+        ItemHeight = 0
+        Items.Strings = (
+          'kilogramo (kg)'
+          'gramo (g)'
+          'miligramo (mg)'
+          'tonelada (t)'
+        )
+        Style = csDropDownList
+        TabOrder = 2
+      end
+      object ButtonMasa: TButton
+        Left = 24
+        Height = 36
+        Top = 128
+        Width = 160
+        Caption = 'Convertir'
+        TabOrder = 3
+        OnClick = ButtonMasaClick
+      end
+      object LabelMasaResultado: TLabel
+        Left = 24
+        Height = 16
+        Top = 192
+        Width = 63
+        Caption = 'Resultado:'
+      end
+    end
+    object TabFuerza: TTabSheet
+      Caption = 'Peso / Fuerza'
+      ClientHeight = 450
+      ClientWidth = 678
+      object LabelFuerzaTitulo: TLabel
+        Left = 24
+        Height = 16
+        Top = 24
+        Width = 163
+        Caption = 'Conversor de peso o fuerza'
+      end
+      object EditFuerza: TEdit
+        Left = 24
+        Height = 28
+        Top = 72
+        Width = 180
+        TabOrder = 0
+        Text = '1'
+      end
+      object ComboFuerzaOrigen: TComboBox
+        Left = 224
+        Height = 26
+        Top = 72
+        Width = 180
+        ItemHeight = 0
+        Items.Strings = (
+          'newton (N)'
+          'kilonewton (kN)'
+          'milinewton (mN)'
+          'kilogramo-fuerza (kgf)'
+        )
+        Style = csDropDownList
+        TabOrder = 1
+      end
+      object ComboFuerzaDestino: TComboBox
+        Left = 424
+        Height = 26
+        Top = 72
+        Width = 180
+        ItemHeight = 0
+        Items.Strings = (
+          'newton (N)'
+          'kilonewton (kN)'
+          'milinewton (mN)'
+          'kilogramo-fuerza (kgf)'
+        )
+        Style = csDropDownList
+        TabOrder = 2
+      end
+      object ButtonFuerza: TButton
+        Left = 24
+        Height = 36
+        Top = 128
+        Width = 160
+        Caption = 'Convertir'
+        TabOrder = 3
+        OnClick = ButtonFuerzaClick
+      end
+      object LabelFuerzaResultado: TLabel
+        Left = 24
+        Height = 16
+        Top = 192
+        Width = 63
+        Caption = 'Resultado:'
+      end
+    end
+    object TabLongitud: TTabSheet
+      Caption = 'Longitud'
+      ClientHeight = 450
+      ClientWidth = 678
+      object LabelLongitudTitulo: TLabel
+        Left = 24
+        Height = 16
+        Top = 24
+        Width = 133
+        Caption = 'Conversor de longitud'
+      end
+      object EditLongitud: TEdit
+        Left = 24
+        Height = 28
+        Top = 72
+        Width = 180
+        TabOrder = 0
+        Text = '1'
+      end
+      object ComboLongitudOrigen: TComboBox
+        Left = 224
+        Height = 26
+        Top = 72
+        Width = 180
+        ItemHeight = 0
+        Items.Strings = (
+          'metro (m)'
+          'kilometro (km)'
+          'centimetro (cm)'
+          'milimetro (mm)'
+          'micrometro (um)'
+        )
+        Style = csDropDownList
+        TabOrder = 1
+      end
+      object ComboLongitudDestino: TComboBox
+        Left = 424
+        Height = 26
+        Top = 72
+        Width = 180
+        ItemHeight = 0
+        Items.Strings = (
+          'metro (m)'
+          'kilometro (km)'
+          'centimetro (cm)'
+          'milimetro (mm)'
+          'micrometro (um)'
+        )
+        Style = csDropDownList
+        TabOrder = 2
+      end
+      object ButtonLongitud: TButton
+        Left = 24
+        Height = 36
+        Top = 128
+        Width = 160
+        Caption = 'Convertir'
+        TabOrder = 3
+        OnClick = ButtonLongitudClick
+      end
+      object LabelLongitudResultado: TLabel
+        Left = 24
+        Height = 16
+        Top = 192
+        Width = 63
+        Caption = 'Resultado:'
+      end
+    end
+    object TabArea: TTabSheet
+      Caption = 'Area'
+      ClientHeight = 450
+      ClientWidth = 678
+      object LabelAreaTitulo: TLabel
+        Left = 24
+        Height = 16
+        Top = 24
+        Width = 108
+        Caption = 'Conversor de area'
+      end
+      object EditArea: TEdit
+        Left = 24
+        Height = 28
+        Top = 72
+        Width = 180
+        TabOrder = 0
+        Text = '1'
+      end
+      object ComboAreaOrigen: TComboBox
+        Left = 224
+        Height = 26
+        Top = 72
+        Width = 180
+        ItemHeight = 0
+        Items.Strings = (
+          'metro cuadrado (m2)'
+          'hectarea (ha)'
+          'centimetro cuadrado (cm2)'
+          'milimetro cuadrado (mm2)'
+        )
+        Style = csDropDownList
+        TabOrder = 1
+      end
+      object ComboAreaDestino: TComboBox
+        Left = 424
+        Height = 26
+        Top = 72
+        Width = 180
+        ItemHeight = 0
+        Items.Strings = (
+          'metro cuadrado (m2)'
+          'hectarea (ha)'
+          'centimetro cuadrado (cm2)'
+          'milimetro cuadrado (mm2)'
+        )
+        Style = csDropDownList
+        TabOrder = 2
+      end
+      object ButtonArea: TButton
+        Left = 24
+        Height = 36
+        Top = 128
+        Width = 160
+        Caption = 'Convertir'
+        TabOrder = 3
+        OnClick = ButtonAreaClick
+      end
+      object LabelAreaResultado: TLabel
+        Left = 24
+        Height = 16
+        Top = 192
+        Width = 63
+        Caption = 'Resultado:'
+      end
+    end
+    object TabTemperatura: TTabSheet
+      Caption = 'Temperatura'
+      ClientHeight = 450
+      ClientWidth = 678
+      object LabelTemperaturaTitulo: TLabel
+        Left = 24
+        Height = 16
+        Top = 24
+        Width = 158
+        Caption = 'Conversor de temperatura'
+      end
+      object EditTemperatura: TEdit
+        Left = 24
+        Height = 28
+        Top = 72
+        Width = 180
+        TabOrder = 0
+        Text = '25'
+      end
+      object ComboTemperaturaOrigen: TComboBox
+        Left = 224
+        Height = 26
+        Top = 72
+        Width = 180
+        ItemHeight = 0
+        Items.Strings = (
+          'Celsius (C)'
+          'Kelvin (K)'
+          'Fahrenheit (F)'
+        )
+        Style = csDropDownList
+        TabOrder = 1
+      end
+      object ComboTemperaturaDestino: TComboBox
+        Left = 424
+        Height = 26
+        Top = 72
+        Width = 180
+        ItemHeight = 0
+        Items.Strings = (
+          'Celsius (C)'
+          'Kelvin (K)'
+          'Fahrenheit (F)'
+        )
+        Style = csDropDownList
+        TabOrder = 2
+      end
+      object ButtonTemperatura: TButton
+        Left = 24
+        Height = 36
+        Top = 128
+        Width = 160
+        Caption = 'Convertir'
+        TabOrder = 3
+        OnClick = ButtonTemperaturaClick
+      end
+      object LabelTemperaturaResultado: TLabel
+        Left = 24
+        Height = 16
+        Top = 192
+        Width = 63
+        Caption = 'Resultado:'
+      end
+    end
+    object TabVelocidad: TTabSheet
+      Caption = 'Velocidad'
+      ClientHeight = 450
+      ClientWidth = 678
+      object LabelVelocidadTitulo: TLabel
+        Left = 24
+        Height = 16
+        Top = 24
+        Width = 138
+        Caption = 'Conversor de velocidad'
+      end
+      object EditVelocidad: TEdit
+        Left = 24
+        Height = 28
+        Top = 72
+        Width = 180
+        TabOrder = 0
+        Text = '1'
+      end
+      object ComboVelocidadOrigen: TComboBox
+        Left = 224
+        Height = 26
+        Top = 72
+        Width = 180
+        ItemHeight = 0
+        Items.Strings = (
+          'metro/segundo (m/s)'
+          'kilometro/hora (km/h)'
+          'centimetro/segundo (cm/s)'
+          'milimetro/segundo (mm/s)'
+        )
+        Style = csDropDownList
+        TabOrder = 1
+      end
+      object ComboVelocidadDestino: TComboBox
+        Left = 424
+        Height = 26
+        Top = 72
+        Width = 180
+        ItemHeight = 0
+        Items.Strings = (
+          'metro/segundo (m/s)'
+          'kilometro/hora (km/h)'
+          'centimetro/segundo (cm/s)'
+          'milimetro/segundo (mm/s)'
+        )
+        Style = csDropDownList
+        TabOrder = 2
+      end
+      object ButtonVelocidad: TButton
+        Left = 24
+        Height = 36
+        Top = 128
+        Width = 160
+        Caption = 'Convertir'
+        TabOrder = 3
+        OnClick = ButtonVelocidadClick
+      end
+      object LabelVelocidadResultado: TLabel
+        Left = 24
+        Height = 16
+        Top = 192
+        Width = 63
+        Caption = 'Resultado:'
+      end
+    end
+  end
+end

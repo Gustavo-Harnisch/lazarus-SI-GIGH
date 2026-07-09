@@ -1,0 +1,27 @@
+# Lazarus / Free Pascal
+lib/
+backup/
+*.ppu
+*.o
+*.or
+*.rsj
+*.compiled
+*.dbg
+*.bak
+*.tmp
+
+# Sesión local de Lazarus
+*.lps
+
+# Ejecutables
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Ejecutable Linux generado por Lazarus
+project1
+
+# Sistema
+.DS_Store
+Thumbs.db
